@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="bean-setter" class="com.dnoda.spring.Incorporation">
+		<constructor-arg index="0" value="BMW"></constructor-arg>
+		<constructor-arg index="1" value="1998"></constructor-arg>
+		<property name="postalCode" value="053823"></property>
+		<property name="employeeCount" value="100"></property>
+	</bean>
+</beans>
