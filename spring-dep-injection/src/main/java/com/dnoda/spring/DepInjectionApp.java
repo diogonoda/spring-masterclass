@@ -11,8 +11,17 @@ public class DepInjectionApp {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("bean-setter.xml");
 
 		Organization organization = (Organization) applicationContext.getBean("organization-bean");
+		Organization organization2 = (Organization) applicationContext.getBean("organization-bean");
+		organization2.setPostalCode(111111);
 		
 		System.out.println(organization);
+		System.out.println(organization2);
+		
+		if(organization == organization2) {
+			System.out.println("equals");
+		} else {
+			System.out.println("different");
+		}
 		
 		System.out.println(organization.corporateService());
 		
